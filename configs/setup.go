@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"statsv0/tools/env"
+	"mysqlbinlogparser/tools/env"
 	"time"
 
 	"github.com/go-redis/redis/v7"

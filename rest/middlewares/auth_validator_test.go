@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"testing"
 
-	"statsv0/models/security"
-	"statsv0/tools/custerror"
-	"statsv0/tools/test"
+	"mysqlbinlogparser/models/security"
+	"mysqlbinlogparser/tools/custerror"
+	"mysqlbinlogparser/tools/test"
 
 	"github.com/gin-gonic/gin"
 	"gopkg.in/go-playground/assert.v1"

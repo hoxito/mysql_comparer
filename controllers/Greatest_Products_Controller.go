@@ -3,10 +3,10 @@ package controllers
 import (
 	"context"
 	"fmt"
-	"statsv0/configs"
-	"statsv0/models"
-	"statsv0/rest/middlewares"
-	"statsv0/services"
+	"mysqlbinlogparser/configs"
+	"mysqlbinlogparser/models"
+	"mysqlbinlogparser/rest/middlewares"
+	"mysqlbinlogparser/services"
 	"strconv"
 	"time"
 

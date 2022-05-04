@@ -1,7 +1,7 @@
 # Docker para desarrollo
 FROM golang:1.14.3-buster
 
-WORKDIR /go/src/statsv0
+WORKDIR /go/src/mysqlbinlogparser
 
 ENV REDIS_URL host.docker.internal:6379
 ENV RABBIT_URL amqp://host.docker.internal
@@ -12,4 +12,4 @@ ENV MONGO_URL mongodb+srv://jose:statsgo@cluster0.j1j5b.mongodb.net/myFirstDatab
 # Puerto de stats Service y debug
 EXPOSE 3010
 
-CMD ["go" , "run" , "/go/src/statsv0"]
+CMD ["go" , "run" , "/go/src/mysqlbinlogparser"]

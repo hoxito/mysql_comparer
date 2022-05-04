@@ -4,12 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"mysqlbinlogparser/configs"
+	"mysqlbinlogparser/models"
 	"net/http"
-	"statsv0/configs"
-	"statsv0/models"
 
-	"statsv0/tools/custerror"
-	"statsv0/tools/env"
+	"mysqlbinlogparser/tools/custerror"
+	"mysqlbinlogparser/tools/env"
 	"strconv"
 	"time"
 
@@ -18,8 +18,6 @@ import (
 )
 
 var SellsPerDayCollection *mongo.Collection = configs.GetCollection(configs.DB, "SellsPerDay")
-
-
 
 func GuardarSellsPerDay(art models.Article, month int, year int, weekday int) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
@@ -39,6 +37,7 @@ func GuardarSellsPerDay(art models.Article, month int, year int, weekday int) {
 		return
 	}
 }
+
 //encuentra dia de la semana con mas ventas de todos los articulos de todos los tiempos
 func SearchBestDay() (*models.AggSellsPerDay, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -182,7 +181,6 @@ func SearchProductDay(year, month int, productId string) (*models.AggSellsPerDay
 	}
 	return &productDay[0], nil
 }
-
 
 //Funcion que obtiene de la cache o en caso de no ser posible, del microservicio catalog, los datos de un cierto producto
 // a partir de su ID.

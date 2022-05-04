@@ -6,9 +6,9 @@ import (
 	"log"
 	"time"
 
-	"statsv0/models/security"
-	"statsv0/tools/custerror"
-	"statsv0/tools/env"
+	"mysqlbinlogparser/models/security"
+	"mysqlbinlogparser/tools/custerror"
+	"mysqlbinlogparser/tools/env"
 
 	"github.com/streadway/amqp"
 )

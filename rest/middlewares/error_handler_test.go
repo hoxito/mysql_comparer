@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"statsv0/tools/custerror"
+	"mysqlbinlogparser/tools/custerror"
 
-	"statsv0/tools/test"
+	"mysqlbinlogparser/tools/test"
 
 	"github.com/gin-gonic/gin"
 )

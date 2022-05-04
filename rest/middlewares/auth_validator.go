@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"statsv0/models/security"
-	"statsv0/tools/custerror"
+	"mysqlbinlogparser/models/security"
+	"mysqlbinlogparser/tools/custerror"
 
 	"github.com/gin-gonic/gin"
 )

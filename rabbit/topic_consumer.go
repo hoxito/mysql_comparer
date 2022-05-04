@@ -6,10 +6,10 @@ import (
 	"log"
 	"time"
 
-	"statsv0/controllers"
-	"statsv0/models"
-	"statsv0/services"
-	"statsv0/tools/env"
+	"mysqlbinlogparser/controllers"
+	"mysqlbinlogparser/models"
+	"mysqlbinlogparser/services"
+	"mysqlbinlogparser/tools/env"
 
 	"github.com/streadway/amqp"
 )

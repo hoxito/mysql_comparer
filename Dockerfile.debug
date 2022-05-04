@@ -1,7 +1,7 @@
 # Docker para desarrollo
 FROM golang:1.14.3-buster
 
-WORKDIR /go/src/statsv0
+WORKDIR /go/src/mysqlbinlogparser
 
 RUN go get github.com/derekparker/delve/cmd/dlv
 

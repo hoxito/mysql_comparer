@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-	"statsv0/configs"
-	"statsv0/rabbit"
-	"statsv0/rest/middlewares"
-	"statsv0/rest/routes"
-	"statsv0/tools/env"
+	"mysqlbinlogparser/configs"
+	"mysqlbinlogparser/rabbit"
+	"mysqlbinlogparser/rest/middlewares"
+	"mysqlbinlogparser/rest/routes"
+	"mysqlbinlogparser/tools/env"
 	"time"
 
 	cors "github.com/itsjamie/gin-cors"

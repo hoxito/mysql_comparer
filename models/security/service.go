@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"statsv0/tools/custerror"
+	"mysqlbinlogparser/tools/custerror"
 
 	gocache "github.com/patrickmn/go-cache"
 )

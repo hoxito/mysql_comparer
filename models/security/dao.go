@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"statsv0/tools/custerror"
-	"statsv0/tools/env"
+	"mysqlbinlogparser/tools/custerror"
+	"mysqlbinlogparser/tools/env"
 
 	"github.com/go-playground/validator"
 )

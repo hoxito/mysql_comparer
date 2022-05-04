@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"statsv0/tools/custerror"
+	"mysqlbinlogparser/tools/custerror"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator"
