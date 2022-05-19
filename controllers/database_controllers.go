@@ -337,7 +337,8 @@ func getColumnName(s *sql.DB, schema, table string) (ts []column, err error) {
 		var is_nullable string
 
 		if err := q.Scan(&column_name, &column_type, &column_default, &is_nullable); err != nil {
-			log.Fatal(err)
+
+			return nil, err
 		}
 
 		col := column{}
@@ -359,21 +360,22 @@ func getColumnName(s *sql.DB, schema, table string) (ts []column, err error) {
 }
 
 // IndexDiff
-func IndexDiff(db1, db2 *sql.DB, schema1, schema2 string, table []string) {
+func IndexDiff(db1, db2 *sql.DB, schema1, schema2 string, table []string) (str string, err error) {
 	for _, t := range table {
 		indexName1, err := getIndexName(db1, schema1, t)
 		if err != nil {
-			dLog.Fatalln(err.Error())
+			return "", err
 		}
 		indexName2, err := getIndexName(db2, schema2, t)
 		if err != nil {
-			dLog.Fatalln(err.Error())
+			return "", err
 		}
 		if !isEqual(indexName1, indexName2) {
 			dt := diffName(indexName1, indexName2)
-			dLog.Printf("both databases %s with different indexes with a total of %d respectively: %s", t, len(dt), dt)
+			str := fmt.Sprintf("both databases %s with different indexes with a total of %d respectively: %s", t, len(dt), dt)
+			return str, nil
 		} else {
-			// dLog.Printf("两个数据库%s表，索引相同", t)
+			return fmt.Sprintf("dos tablas de base de datos: %s tienen el mismo indice", t), err
 		}
 	}
 }
@@ -395,7 +397,7 @@ func getIndexName(s *sql.DB, schema, table string) (ts []string, err error) {
 	for q.Next() {
 		var name string
 		if err := q.Scan(&name); err != nil {
-			log.Fatal(err)
+			return nil, err
 		}
 		ts = append(ts, name)
 	}
