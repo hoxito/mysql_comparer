@@ -49,7 +49,7 @@ func Conn(dataSourceName string) *sql.DB {
 	//Opens connection with the given datasourceName and driver=mysql
 	db, err := sql.Open(driverName, dataSourceName)
 	if err != nil {
-		dLog.Println(err.Error())
+		str = (err.Error())
 		os.Exit(-1)
 	}
 	if err := db.Ping(); err != nil {
@@ -88,7 +88,7 @@ func Main() (diff string) {
 	dLog.SetPrefix("[Info]")
 	//flags
 	dLog.SetFlags(dLog.Flags() | log.LstdFlags)
-	dLog.Println("flags...")
+	diff = "flags..."
 	// parsing toml config file
 	if _, err := toml.DecodeFile("config.toml", &dbConfig); err != nil {
 		fmt.Println("Error parsing config toml:", err.Error())
@@ -105,55 +105,55 @@ func Main() (diff string) {
 	db2 := Conn(getSource("2"))
 	defer db2.Close()
 
-	dLog.Println("Connected.")
+	diff = "Connected."
 	diff = diff + "Connected.\n"
-	//dLog.Println("comparing Triggers")
+	//diff=("comparing Triggers"
 	//TriggerDiff(db1, db2, schema1, schema2)
 	// Functions
-	dLog.Println("comparing functions...")
+	diff = "comparing functions..."
 	diff = diff + "comparing functions..."
 	diff = diff + "\n"
 	FunctionDiff(db1, db2, schema1, schema2)
 	// Tables
-	dLog.Println("comparing tables...")
+	diff = "comparing tables..."
 	diff = diff + "comparing tables...\n"
 	diff = diff + "\n"
-	ts, b := TableDiff(db1, db2, schema1, schema2)
+	ts, str, b := TableDiff(db1, db2, schema1, schema2)
+	diff = diff + str
 	if b {
-		dLog.Println("Found differences...")
+		diff = "Found differences..."
 		diff = diff + "found diffs:" + strings.Join(ts[:], ",")
 		diff = diff + "\n"
 		//compare columns and indexes
-		dLog.Println("comparing columns")
+		diff = "comparing columns"
 		diff = diff + "comparing columns"
 		diff = diff + "\n"
 		ColumnDiff(db1, db2, schema1, schema2, ts)
-		dLog.Println("comparing indexes")
+		diff = "comparing indexes"
 		diff = diff + "comparing indexes"
 		diff = diff + "\n"
 		IndexDiff(db1, db2, schema1, schema2, ts)
 	}
 
-	dLog.Println("Done!")
+	diff = "Done!"
 	diff = diff + "\n"
 	diff = diff + "Done!"
 	return diff
 }
 
 // TableDiff
-func TableDiff(db1, db2 *sql.DB, schema1, schema2 string) (t []string, b bool) {
+func TableDiff(db1, db2 *sql.DB, schema1, schema2 string) (t []string, str string, b bool) {
 	tableName1, err := getTableName(db1, schema1)
 	if err != nil {
 		dLog.Fatalln(err.Error())
 	}
-
-	dLog.Println(dbConfig.Servers["1"].Host, "/", schema1, " tabla: ", tableName1)
+	str = fmt.Sprintf("%s / %s tabla: %s", (dbConfig.Servers["1"].Host), schema1, tableName1)
 	tableName2, err := getTableName(db2, schema2)
 	if err != nil {
 		dLog.Fatalln(err.Error())
 	}
 
-	dLog.Println(dbConfig.Servers["2"].Host, "/", schema2, " tabla: ", tableName2)
+	str = fmt.Sprintf("%s / %s tabla: %s", (dbConfig.Servers["2"].Host), schema2, tableName2)
 	if !isEqual(tableName1, tableName2) {
 		t = diffName(tableName1, tableName2)
 		dLog.Printf("differences: %d respectively: %s", len(t), t)
@@ -232,23 +232,22 @@ func getTriggerName(s *sql.DB, schema string) (ts []string, err error) {
 }
 
 // FunctionDiff
-func FunctionDiff(db1, db2 *sql.DB, schema1, schema2 string) bool {
+func FunctionDiff(db1, db2 *sql.DB, schema1, schema2 string) (bool, str string, err error) {
 	functionName1, err := getFunctionName(db1, schema1)
 	if err != nil {
-		dLog.Fatalln(err.Error())
+		return nil, nil, err
 	}
 	functionName2, err := getFunctionName(db2, schema2)
 	if err != nil {
-		dLog.Fatalln(err.Error())
+		return nil, nil, err
 	}
-	dLog.Println(functionName1)
-	dLog.Println(functionName2)
+	str = (functionName1 + "\n")
+	str = (functionName2 + "\n")
 	if !isEqual(functionName1, functionName2) {
 		dt := diffName(functionName1, functionName2)
-		dLog.Printf("differences: %d respectively: %s", len(dt), dt)
+		str = fmt.Sprintf("differences: %d respectively: %s", len(dt), dt)
 		return false
 	}
-	// dLog.Printf("两个数据库函数相同")
 	return true
 }
 
