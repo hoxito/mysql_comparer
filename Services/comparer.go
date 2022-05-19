@@ -156,12 +156,12 @@ func TableDiff(db1, db2 *sql.DB, schema1, schema2 string) (t []string, str strin
 	str = fmt.Sprintf("%s / %s tabla: %s", (dbConfig.Servers["2"].Host), schema2, tableName2)
 	if !isEqual(tableName1, tableName2) {
 		t = diffName(tableName1, tableName2)
-		dLog.Printf("differences: %d respectively: %s", len(t), t)
-		return t, false
+		str = str + fmt.Sprintf("differences: %d respectively: %s", len(t), t)
+		return t, str, false
 	}
 	t = tableName1
-	dLog.Printf("Ambas tablas de base de datos son iguales.")
-	return t, true
+	str=str+  fmt.Sprintf("Ambas tablas de base de datos son iguales.")
+	return t, str, true
 }
 
 func getTableName(s *sql.DB, table string) (ts []string, err error) {
@@ -235,20 +235,20 @@ func getTriggerName(s *sql.DB, schema string) (ts []string, err error) {
 func FunctionDiff(db1, db2 *sql.DB, schema1, schema2 string) (bool, str string, err error) {
 	functionName1, err := getFunctionName(db1, schema1)
 	if err != nil {
-		return nil, nil, err
+		return false, "", err
 	}
 	functionName2, err := getFunctionName(db2, schema2)
 	if err != nil {
-		return nil, nil, err
+		return false, "", err
 	}
-	str = (functionName1 + "\n")
-	str = (functionName2 + "\n")
+	str = str+(functionName1 + "\n")
+	str = str+(functionName2 + "\n")
 	if !isEqual(functionName1, functionName2) {
 		dt := diffName(functionName1, functionName2)
-		str = fmt.Sprintf("differences: %d respectively: %s", len(dt), dt)
-		return false
+		str = str+fmt.Sprintf("differences: %d respectively: %s", len(dt), dt)
+		return false,str,nil
 	}
-	return true
+	return true,str,nil
 }
 
 func getFunctionName(s *sql.DB, schema string) (ts []string, err error) {
