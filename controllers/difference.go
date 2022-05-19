@@ -6,6 +6,7 @@ import (
 	"mysqlbinlogparser/configs"
 	"mysqlbinlogparser/models"
 	"mysqlbinlogparser/responses"
+	"mysqlbinlogparser/services"
 	"net/http"
 	"strconv"
 	"time"
@@ -18,38 +19,13 @@ import (
 
 var peakHourCollection *mongo.Collection = configs.GetCollection(configs.DB, "PeakHour")
 
-func CreatePeakHour(c *gin.Context) {
+func GetDiff(c *gin.Context) {
+	var diffs models.Difference
+	diffs.Master = "aws siis"
+	diffs.Slave = "aws siistesting"
+	diffs.Differences = services.Main()
+	c.JSON(200, diffs)
 
-	var peakHour models.PeakHour
-
-	//valida el body
-	if err := c.BindJSON(&peakHour); err != nil {
-		c.Error(err)
-		return
-	}
-
-	// Valida los campos requeridos usando la estructura estandar
-	if validationErr := validate.Struct(&peakHour); validationErr != nil {
-		c.Error(validationErr)
-		return
-	}
-
-	newPH := models.PeakHour{
-
-		Hour:          peakHour.Hour,
-		Month:         peakHour.Month,
-		Year:          peakHour.Year,
-		OrderQuantity: peakHour.OrderQuantity,
-	}
-
-	result, err := peakHourCollection.InsertOne(c, newPH)
-	if err != nil {
-		c.Error(err)
-		return
-	}
-
-	fmt.Println("creando...")
-	c.JSON(http.StatusCreated, gin.H{"ID:": result.InsertedID, "hora": newPH.Hour, "mes": newPH.Month, "año": newPH.Year, "cantidad:": newPH.OrderQuantity})
 }
 
 func GetYearPeakHourSorted() gin.HandlerFunc {

@@ -6,15 +6,15 @@ schemaname2 = "siistesting"
 [servers]
   # You can indent as you please. Tabs or spaces. TOML don't care.
   [servers.1]
-  host = "127.0.0.1"
+  host = "siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com"
   port = "3306"
-  user = "root"
-  password = "123456"
+  user = "admin"
+  password = "NI0zv26k8uRXoo7VgIdo"
   name = "siis"
 
   [servers.2]
-  host = "127.0.0.1"
+  host = "siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com"
   port = "3306"
   user = "admin"
-  password = "123456"
+  password = "NI0zv26k8uRXoo7VgIdo"
   name = "siistesting"

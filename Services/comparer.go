@@ -1,9 +1,10 @@
-package controllers
+package services
 
 import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 
 	"database/sql"
 
@@ -72,8 +73,9 @@ func getSource(db string) (source string) {
 	return
 }
 
-func main() {
+func Main() (diff string) {
 
+	driverName = "mysql"
 	// Create diff log
 	logFile, err := os.Create("diff.log")
 	defer logFile.Close()
@@ -90,7 +92,7 @@ func main() {
 	// parsing toml config file
 	if _, err := toml.DecodeFile("config.toml", &dbConfig); err != nil {
 		fmt.Println("Error parsing config toml:", err.Error())
-		return
+		return "error parsing toml"
 	}
 
 	dLog.Printf("Loading %s/%s ", dbConfig.Servers["1"].Host, dbConfig.Servers["1"].Name)
@@ -104,24 +106,38 @@ func main() {
 	defer db2.Close()
 
 	dLog.Println("Connected.")
+	diff = diff + "Connected.\n"
 	//dLog.Println("comparing Triggers")
 	//TriggerDiff(db1, db2, schema1, schema2)
 	// Functions
 	dLog.Println("comparing functions...")
+	diff = diff + "comparing functions..."
+	diff = diff + "\n"
 	FunctionDiff(db1, db2, schema1, schema2)
 	// Tables
 	dLog.Println("comparing tables...")
+	diff = diff + "comparing tables...\n"
+	diff = diff + "\n"
 	ts, b := TableDiff(db1, db2, schema1, schema2)
 	if b {
 		dLog.Println("Found differences...")
+		diff = diff + "found diffs:" + strings.Join(ts[:], ",")
+		diff = diff + "\n"
 		//compare columns and indexes
 		dLog.Println("comparing columns")
+		diff = diff + "comparing columns"
+		diff = diff + "\n"
 		ColumnDiff(db1, db2, schema1, schema2, ts)
 		dLog.Println("comparing indexes")
+		diff = diff + "comparing indexes"
+		diff = diff + "\n"
 		IndexDiff(db1, db2, schema1, schema2, ts)
 	}
 
 	dLog.Println("Done!")
+	diff = diff + "\n"
+	diff = diff + "Done!"
+	return diff
 }
 
 // TableDiff
@@ -284,33 +300,47 @@ func genAlterSql(t string, col column) string {
 }
 
 // ColumnDiff
-func ColumnDiff(db1, db2 *sql.DB, schema1, schema2 string, table []string) {
+func ColumnDiff(db1, db2 *sql.DB, schema1, schema2 string, table []string) (diff string) {
 	for _, t := range table {
 		columnName1, err := getColumnName(db1, schema1, t)
 		if err != nil {
 			dLog.Fatalln(err.Error())
+			return err.Error()
 		}
 		columnName2, err := getColumnName(db2, schema2, t)
 		if err != nil {
 			dLog.Fatalln(err.Error())
+			return err.Error()
 		}
 		if !columnIsEqual(columnName1, columnName2) {
 			// dt := diffName(columnName1, columnName2)
 			col1, col2 := columnDiff(columnName1, columnName2)
 
 			dLog.Printf("database: %s table: %s different columns: %d", schema1, t, len(col1))
+			diff = diff + fmt.Sprintf("database slave table: %s different columns: %d", schema1, t, len(col1))
+			diff = diff + "\n"
+
 			for _, col := range col1 {
 				dLog.Printf(genAlterSql(t, col))
+				diff = diff + genAlterSql(t, col)
+				diff = diff + "\n"
 			}
 
 			dLog.Printf("database: %s table: %s different columns: %d", schema2, t, len(col2))
+			diff = diff + fmt.Sprintf("database: %s table: %s different columns: %d", schema2, t, len(col2))
+			diff = diff + "\n"
 			for _, col := range col2 {
 				dLog.Printf(genAlterSql(t, col))
+				diff = diff + genAlterSql(t, col)
+				diff = diff + "\n"
 			}
 		} else {
 			dLog.Printf("both tables %s have same columns", t)
+			diff = diff + fmt.Sprintf("both tables %s have same columns", t)
+			diff = diff + "\n"
 		}
 	}
+	return diff
 }
 
 func getColumnName(s *sql.DB, schema, table string) (ts []column, err error) {
@@ -373,7 +403,6 @@ func IndexDiff(db1, db2 *sql.DB, schema1, schema2 string, table []string) {
 			dt := diffName(indexName1, indexName2)
 			dLog.Printf("both databases %s with different indexes with a total of %d respectively: %s", t, len(dt), dt)
 		} else {
-			// dLog.Printf("两个数据库%s表，索引相同", t)
 		}
 	}
 }
