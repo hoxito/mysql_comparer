@@ -6,7 +6,6 @@ require (
 	github.com/go-playground/validator v9.31.0+incompatible
 	github.com/go-redis/redis/v7 v7.4.1
 	github.com/patrickmn/go-cache v2.1.0+incompatible
-	github.com/posener/order v0.0.1
 	github.com/streadway/amqp v1.0.0
 	go.mongodb.org/mongo-driver v1.9.0
 	gopkg.in/go-playground/assert.v1 v1.2.1

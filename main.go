@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"mysqlbinlogparser/configs"
-	"mysqlbinlogparser/rabbit"
 	"mysqlbinlogparser/rest/middlewares"
 	"mysqlbinlogparser/rest/routes"
 	"mysqlbinlogparser/tools/env"
@@ -15,13 +13,12 @@ import (
 )
 
 func main() {
-	rabbit.Init()
-	rabbit.InitOrders()
 	router := gin.Default()
+	routes.ComprarerRoute(router)
 	router.Use(middlewares.ErrorHandler)
 
 	router.Use(cors.Middleware(cors.Config{
-		Origins:         "*",
+		Origins:         "http://localhost:80,http://localhost:8080",
 		Methods:         "GET, PUT, POST, DELETE",
 		RequestHeaders:  "Origin, Authorization, Content-Type, Size",
 		ExposedHeaders:  "",
@@ -30,11 +27,7 @@ func main() {
 		ValidateHeaders: false,
 	}))
 
-	configs.ConnectDB()
+	// configs.ConnectDB() implement db to save differences history
 
-	routes.PeakHourRoute(router)
-	routes.GreatestOrdersRoute(router)
-	routes.GreatestProductsRoute(router)
-	routes.SellsPerDayRoute(router)
 	router.Run(fmt.Sprintf(":%d", env.Get().Port))
 }

@@ -24,10 +24,10 @@ func new() *Configuration {
 	return &Configuration{
 		Port:              3010,
 		RabbitURL:         "amqp://localhost",
-		MongoURL:          "mongodb+srv://jose:statsgo@cluster0.j1j5b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+		MongoURL:          "mongodb://localhost:27017",
 		RedisURL:          "localhost:6379",
 		WWWWPath:          "www",
-		JWTSecret:         "ecb6d3479ac3823f1da7f314d871989b",
+		JWTSecret:         "ecb6jose9ac3823f1da7f314d871989b",
 		SecurityServerURL: "http://localhost:3000",
 		CatalogURL:        "http://localhost:3002",
 		OrdersURL:         "http://localhost:3004",
