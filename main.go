@@ -29,5 +29,8 @@ func main() {
 
 	// configs.ConnectDB() implement db to save differences history
 
+	// prometheus.MustRegister(metrics.DiffCounter)
+	// http.Handle("/metrics", promhttp.Handler())
+	// http.ListenAndServe(":2000", nil)
 	router.Run(fmt.Sprintf(":%d", env.Get().Port))
 }
