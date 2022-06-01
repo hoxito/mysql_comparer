@@ -7,13 +7,11 @@ import (
 	"mysqlbinlogparser/tools/env"
 	"time"
 
-	docs "mysqlbinlogparser/docs"
-
+	cors "github.com/itsjamie/gin-cors"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/gin-gonic/gin"
-	cors "github.com/itsjamie/gin-cors"
 )
 
 // @title           Swagger Diff API
@@ -27,14 +25,14 @@ import (
 // @license.name  Apache 2.0
 // @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
 
-// @host      localhost:3010
+// @host      localhost:8080
 
 // @securityDefinitions.basic  BasicAuth
 func main() {
 	router := gin.Default()
 
-	docs.SwaggerInfo.BasePath = "/v1"
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler,
+		ginSwagger.URL("http://localhost:8080/swagger/doc.json")))
 	routes.ComprarerRoute(router)
 	router.Use(middlewares.ErrorHandler)
 

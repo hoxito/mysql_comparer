@@ -7,7 +7,6 @@ import (
 )
 
 func ComprarerRoute(router *gin.Engine) {
-
 	router.GET("/v1/db/simple/diff", controllers.GetDiff)
 	// router.GET("/v1/db/simple/history", middlewares.ValidateAuthentication, controllers.getHistory())
 	// router.GET("/v1/db/full/diff", middlewares.ValidateAuthentication, controllers.getHistory())

@@ -9,11 +9,11 @@ import (
 
 	docs "mysqlbinlogparser/docs"
 
+	cors "github.com/itsjamie/gin-cors"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/gin-gonic/gin"
-	cors "github.com/itsjamie/gin-cors"
 )
 
 // @title           Swagger Diff API

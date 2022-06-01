@@ -8,6 +8,15 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// var DifferencesCollection *mongo.Collection = configs.GetCollection(configs.DB, "Differeces")
+/*
+*
+*@title Swagger wallet API
+*@description This is a Simple wallet API that can manage users, wallets and transactions between these wallets.
+* @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+*
+ */
+
 /*
 *@description.markdown Gets the difference between 2 databases
 *@Param user_id  path string true "User ID"
@@ -28,19 +37,6 @@ import (
 *@Failure 400
 *
 */
-
-// @BasePath /api/v1
-
-// @Summary Gets the difference between 2 databases
-// @Schemes
-// @Description differenciates databases
-// @Tags getdiff
-// @Accept json
-// @Param   string      query     string     false  "string valid"       minlength(5)  maxlength(10)
-// @Param   int         query     int        false  "int valid"          minimum(1)    maximum(10)
-// @Produce json
-// @Success 200 {array} models.TableDiff
-// @Router /v1/db/simple/diff [get]
 func GetDiff(c *gin.Context) {
 	var diffs models.Difference
 	diffs.Master = "aws siis"

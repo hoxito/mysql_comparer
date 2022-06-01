@@ -7,34 +7,13 @@ import (
 	"mysqlbinlogparser/tools/env"
 	"time"
 
-	docs "mysqlbinlogparser/docs"
-
-	swaggerfiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
+	cors "github.com/itsjamie/gin-cors"
 
 	"github.com/gin-gonic/gin"
-	cors "github.com/itsjamie/gin-cors"
 )
 
-// @title           Swagger Diff API
-// @version         1.0
-// @description     This is a database differenciator API.
-// @termsOfService  http://swagger.io/terms/
-
-// @contact.name   jose aranciba
-// @contact.email  support@swagger.io
-
-// @license.name  Apache 2.0
-// @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
-
-// @host      localhost:3010
-
-// @securityDefinitions.basic  BasicAuth
 func main() {
 	router := gin.Default()
-
-	docs.SwaggerInfo.BasePath = "/v1"
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 	routes.ComprarerRoute(router)
 	router.Use(middlewares.ErrorHandler)
 

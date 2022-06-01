@@ -4,6 +4,7 @@ import (
 	"mysqlbinlogparser/models"
 	"mysqlbinlogparser/services"
 	"mysqlbinlogparser/tools/metrics"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -36,10 +37,8 @@ import (
 // @Description differenciates databases
 // @Tags getdiff
 // @Accept json
-// @Param   string      query     string     false  "string valid"       minlength(5)  maxlength(10)
-// @Param   int         query     int        false  "int valid"          minimum(1)    maximum(10)
 // @Produce json
-// @Success 200 {array} models.TableDiff
+// @Success 200 {string} Difference
 // @Router /v1/db/simple/diff [get]
 func GetDiff(c *gin.Context) {
 	var diffs models.Difference
@@ -49,4 +48,8 @@ func GetDiff(c *gin.Context) {
 	metrics.DiffCounter.Inc()
 	c.JSON(200, diffs)
 
+}
+
+func Helloworld(g *gin.Context) {
+	g.JSON(http.StatusOK, "helloworld")
 }

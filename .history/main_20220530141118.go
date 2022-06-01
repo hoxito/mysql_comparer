@@ -5,35 +5,36 @@ import (
 	"mysqlbinlogparser/rest/middlewares"
 	"mysqlbinlogparser/rest/routes"
 	"mysqlbinlogparser/tools/env"
+	"net/http"
 	"time"
 
 	docs "mysqlbinlogparser/docs"
 
+	cors "github.com/itsjamie/gin-cors"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/gin-gonic/gin"
-	cors "github.com/itsjamie/gin-cors"
 )
 
-// @title           Swagger Diff API
-// @version         1.0
-// @description     This is a database differenciator API.
-// @termsOfService  http://swagger.io/terms/
+// @BasePath /api/v1
 
-// @contact.name   jose aranciba
-// @contact.email  support@swagger.io
-
-// @license.name  Apache 2.0
-// @license.url   http://www.apache.org/licenses/LICENSE-2.0.html
-
-// @host      localhost:3010
-
-// @securityDefinitions.basic  BasicAuth
+// PingExample godoc
+// @Summary ping example
+// @Schemes
+// @Description do ping
+// @Tags example
+// @Accept json
+// @Produce json
+// @Success 200 {string} Helloworld
+// @Router /example/helloworld [get]
+func Helloworld(g *gin.Context) {
+	g.JSON(http.StatusOK, "helloworld")
+}
 func main() {
 	router := gin.Default()
 
-	docs.SwaggerInfo.BasePath = "/v1"
+	docs.SwaggerInfo.BasePath = "/api/v1"
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 	routes.ComprarerRoute(router)
 	router.Use(middlewares.ErrorHandler)

@@ -1,0 +1,61 @@
+definitions:
+  models.TableDiff:
+    properties:
+      db1:
+        type: string
+      db2:
+        type: string
+      name:
+        type: string
+      script1:
+        type: string
+      script2:
+        type: string
+    type: object
+host: localhost:3010
+info:
+  contact:
+    email: support@swagger.io
+    name: jose aranciba
+  description: This is a database differenciator API.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Diff API
+  version: "1.0"
+paths:
+  /v1/db/simple/diff:
+    get:
+      consumes:
+      - application/json
+      description: differenciates databases
+      parameters:
+      - description: string valid
+        in: query
+        maxLength: 10
+        minLength: 5
+        name: string
+        type: string
+      - description: int valid
+        in: query
+        maximum: 10
+        minimum: 1
+        name: int
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.TableDiff'
+            type: array
+      summary: Gets the difference between 2 databases
+      tags:
+      - getdiff
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"

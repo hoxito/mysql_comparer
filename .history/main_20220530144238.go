@@ -7,13 +7,11 @@ import (
 	"mysqlbinlogparser/tools/env"
 	"time"
 
-	docs "mysqlbinlogparser/docs"
-
+	cors "github.com/itsjamie/gin-cors"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 
 	"github.com/gin-gonic/gin"
-	cors "github.com/itsjamie/gin-cors"
 )
 
 // @title           Swagger Diff API
@@ -33,7 +31,6 @@ import (
 func main() {
 	router := gin.Default()
 
-	docs.SwaggerInfo.BasePath = "/v1"
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 	routes.ComprarerRoute(router)
 	router.Use(middlewares.ErrorHandler)

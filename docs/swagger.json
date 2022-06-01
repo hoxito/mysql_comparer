@@ -1,0 +1,91 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a database differenciator API.",
+        "title": "Swagger Diff API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "jose aranciba",
+            "email": "support@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:3010",
+    "paths": {
+        "/v1/db/simple/diff": {
+            "get": {
+                "description": "differenciates databases",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "getdiff"
+                ],
+                "summary": "Gets the difference between 2 databases",
+                "parameters": [
+                    {
+                        "maxLength": 10,
+                        "minLength": 5,
+                        "type": "string",
+                        "description": "string valid",
+                        "name": "string",
+                        "in": "query"
+                    },
+                    {
+                        "maximum": 10,
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "int valid",
+                        "name": "int",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.TableDiff"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.TableDiff": {
+            "type": "object",
+            "properties": {
+                "db1": {
+                    "type": "string"
+                },
+                "db2": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "script1": {
+                    "type": "string"
+                },
+                "script2": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "securityDefinitions": {
+        "BasicAuth": {
+            "type": "basic"
+        }
+    }
+}

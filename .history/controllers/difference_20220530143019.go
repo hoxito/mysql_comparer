@@ -4,6 +4,7 @@ import (
 	"mysqlbinlogparser/models"
 	"mysqlbinlogparser/services"
 	"mysqlbinlogparser/tools/metrics"
+	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
@@ -49,4 +50,8 @@ func GetDiff(c *gin.Context) {
 	metrics.DiffCounter.Inc()
 	c.JSON(200, diffs)
 
+}
+
+func Helloworld(g *gin.Context) {
+	g.JSON(http.StatusOK, "helloworld")
 }

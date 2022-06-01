@@ -1,7 +1,5 @@
 package models
 
-// Difference model info
-// @Description Difference Message
 type Difference struct {
 	Master           string       `json:"master,omitempty"`
 	Slave            string       `json:"slave,omitempty" validate:"required"`
