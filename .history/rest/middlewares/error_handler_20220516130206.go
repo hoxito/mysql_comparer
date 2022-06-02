@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hoxito/mysql_comparer/tools/custerror"
+	"mysqlbinlogparser/tools/custerror"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator"

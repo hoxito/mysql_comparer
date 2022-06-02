@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hoxito/mysql_comparer/models/security"
-	"github.com/hoxito/mysql_comparer/tools/custerror"
+	"mysqlbinlogparser/models/security"
+	"mysqlbinlogparser/tools/custerror"
 
 	"github.com/gin-gonic/gin"
 )

@@ -6,9 +6,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/hoxito/mysql_comparer/models/security"
-	"github.com/hoxito/mysql_comparer/tools/custerror"
-	"github.com/hoxito/mysql_comparer/tools/env"
+	"mysqlbinlogparser/models/security"
+	"mysqlbinlogparser/tools/custerror"
+	"mysqlbinlogparser/tools/env"
 
 	"github.com/streadway/amqp"
 )

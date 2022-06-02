@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/hoxito/mysql_comparer/tools/custerror"
-	"github.com/hoxito/mysql_comparer/tools/env"
+	"mysqlbinlogparser/tools/custerror"
+	"mysqlbinlogparser/tools/env"
 
 	"github.com/go-playground/validator"
 )

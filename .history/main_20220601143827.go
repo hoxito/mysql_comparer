@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
+	"mysqlbinlogparser/rest/routes"
+	"mysqlbinlogparser/tools/env"
 	"time"
 
-	"github.com/hoxito/mysql_comparer/rest/routes"
-	"github.com/hoxito/mysql_comparer/tools/env"
-
-	docs "github.com/hoxito/mysql_comparer/docs"
 	"github.com/hoxito/mysql_comparer/rest/middlewares"
+
+	docs "mysqlbinlogparser/docs"
 
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"

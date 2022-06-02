@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/hoxito/mysql_comparer/tools/custerror"
+	"mysqlbinlogparser/tools/custerror"
 
 	gocache "github.com/patrickmn/go-cache"
 )

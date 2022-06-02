@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/hoxito/mysql_comparer/models/security"
-	"github.com/hoxito/mysql_comparer/tools/custerror"
-	"github.com/hoxito/mysql_comparer/tools/test"
+	"mysqlbinlogparser/tools/custerror"
+	"mysqlbinlogparser/tools/test"
 
 	"github.com/gin-gonic/gin"
 	"gopkg.in/go-playground/assert.v1"

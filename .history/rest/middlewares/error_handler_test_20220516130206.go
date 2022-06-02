@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/hoxito/mysql_comparer/tools/custerror"
+	"mysqlbinlogparser/tools/custerror"
 
-	"github.com/hoxito/mysql_comparer/tools/test"
+	"mysqlbinlogparser/tools/test"
 
 	"github.com/gin-gonic/gin"
 )

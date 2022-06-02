@@ -8,7 +8,7 @@ import (
 
 	"database/sql"
 
-	"github.com/hoxito/mysql_comparer/models"
+	"mysqlbinlogparser/models"
 
 	"github.com/BurntSushi/toml"
 	_ "github.com/go-sql-driver/mysql"
