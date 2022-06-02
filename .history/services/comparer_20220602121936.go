@@ -164,12 +164,12 @@ func Main() (diff string, tables string, tablesdiff []*models.TableDiff, err err
 
 // TableDiff
 func TableDiff(db1, db2 *sql.DB, schema1, schema2 string) (t []string, str string, b bool) {
-	tableName1, err := getTableNameLike(db1, schema1, "exp_pre_%")
+	tableName1, err := getTableName(db1, schema1)
 	if err != nil {
 		dLog.Fatalln(err.Error())
 	}
 	str = fmt.Sprintf("%s / %s tables: %s", (dbConfig.Servers["1"].Host), schema1, tableName1)
-	tableName2, err := getTableNameLike(db2, schema2, "exp_pre_%")
+	tableName2, err := getTableName(db2, schema2)
 	if err != nil {
 		dLog.Fatalln(err.Error())
 	}
@@ -186,32 +186,7 @@ func TableDiff(db1, db2 *sql.DB, schema1, schema2 string) (t []string, str strin
 }
 
 func getTableName(s *sql.DB, table string) (ts []string, err error) {
-	stm, perr := s.Prepare("select table_name from information_schema.tables where table_schema=?  order by table_name")
-	if perr != nil {
-		err = perr
-		return nil, err
-	}
-	defer stm.Close()
-	q, qerr := stm.Query(table)
-	if qerr != nil {
-		err = qerr
-		return nil, err
-	}
-	defer q.Close()
-
-	for q.Next() {
-		var name string
-		if err := q.Scan(&name); err != nil {
-			log.Fatal(err)
-			return nil, err
-		}
-		ts = append(ts, name)
-	}
-	return ts, nil
-}
-
-func getTableNameLike(s *sql.DB, table, like string) (ts []string, err error) {
-	stm, perr := s.Prepare(fmt.Sprintf("select table_name from information_schema.tables where table_schema=? and table_name like '%s' order by table_name", like))
+	stm, perr := s.Prepare("select table_name from information_schema.tables where table_schema=? order by table_name")
 	if perr != nil {
 		err = perr
 		return nil, err

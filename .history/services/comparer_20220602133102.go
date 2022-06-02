@@ -164,12 +164,12 @@ func Main() (diff string, tables string, tablesdiff []*models.TableDiff, err err
 
 // TableDiff
 func TableDiff(db1, db2 *sql.DB, schema1, schema2 string) (t []string, str string, b bool) {
-	tableName1, err := getTableNameLike(db1, schema1, "exp_pre_%")
+	tableName1, err := getTableName(db1, schema1)
 	if err != nil {
 		dLog.Fatalln(err.Error())
 	}
 	str = fmt.Sprintf("%s / %s tables: %s", (dbConfig.Servers["1"].Host), schema1, tableName1)
-	tableName2, err := getTableNameLike(db2, schema2, "exp_pre_%")
+	tableName2, err := getTableName(db2, schema2)
 	if err != nil {
 		dLog.Fatalln(err.Error())
 	}

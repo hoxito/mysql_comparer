@@ -67,6 +67,50 @@ const docTemplate = `{
                     }
                 }
             }
+        },
+        "/v1/db/simple/diff/notables": {
+            "get": {
+                "description": "differenciates databases",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "getdiff"
+                ],
+                "summary": "Gets the difference between 2 databases without showing every table in both dbs",
+                "parameters": [
+                    {
+                        "maxLength": 10,
+                        "minLength": 5,
+                        "type": "string",
+                        "description": "string valid",
+                        "name": "string",
+                        "in": "query"
+                    },
+                    {
+                        "maximum": 10,
+                        "minimum": 1,
+                        "type": "integer",
+                        "description": "int valid",
+                        "name": "int",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.TableDiff"
+                            }
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {

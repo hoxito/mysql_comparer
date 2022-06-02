@@ -51,18 +51,6 @@ func GetDiff(c *gin.Context) {
 
 }
 
-// @BasePath /api/v1
-
-// @Summary Gets the difference between 2 databases without showing every table in both dbs
-// @Schemes
-// @Description differenciates databases
-// @Tags getdiff
-// @Accept json
-// @Param   string      query     string     false  "string valid"       minlength(5)  maxlength(10)
-// @Param   int         query     int        false  "int valid"          minimum(1)    maximum(10)
-// @Produce json
-// @Success 200 {array} models.TableDiff
-// @Router /v1/db/simple/diff/notables [get]
 func GetDiffNoTables(c *gin.Context) {
 	var diffs models.Difference
 	diffs.Master = "aws siis"

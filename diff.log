@@ -1,1 +1,133 @@
-[Info]2022/05/27 14:54:26 Loading 127.0.0.1/siis 
+[Info]2022/06/02 13:33:51 Loading siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com/siis 
+[Info]2022/06/02 13:33:52 Loading siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com/siistesting
+[Info]2022/06/02 13:33:55 database: siis table: exp_pre_Archivopdf different columns: 8
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `ArchivopdfID` varchar(60) NOT NULL DEFAULT NULL;
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Nombre` varchar(100) NULL DEFAULT NULL AFTER `ArchivopdfID`;
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Tipo` varchar(100) NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Detalle` varchar(500) NULL DEFAULT NULL AFTER `Tipo`;
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL AFTER `Detalle`;
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Fechainivig` datetime NOT NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Filename` varchar(150) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Extension` varchar(6) NULL DEFAULT NULL AFTER `Filename`;
+[Info]2022/06/02 13:33:55 database: siistesting table: exp_pre_Archivopdf different columns: 1
+[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/02 13:33:56 both tables exp_pre_Articulos have same columns
+[Info]2022/06/02 13:33:56 both tables exp_pre_Atributomo have same columns
+[Info]2022/06/02 13:33:57 both tables exp_pre_Autoridaddependencia have same columns
+[Info]2022/06/02 13:33:58 both tables exp_pre_Autoridadjuzgado have same columns
+[Info]2022/06/02 13:33:59 both tables exp_pre_Barrio have same columns
+[Info]2022/06/02 13:33:59 both tables exp_pre_Calle have same columns
+[Info]2022/06/02 13:34:00 both tables exp_pre_Caratula have same columns
+[Info]2022/06/02 13:34:01 both tables exp_pre_Coincidenciaefecto have same columns
+[Info]2022/06/02 13:34:02 both tables exp_pre_Contrasena have same columns
+[Info]2022/06/02 13:34:02 both tables exp_pre_Cuadrante have same columns
+[Info]2022/06/02 13:34:03 both tables exp_pre_Datatype1 have same columns
+[Info]2022/06/02 13:34:04 both tables exp_pre_Denuncia have same columns
+[Info]2022/06/02 13:34:05 both tables exp_pre_Denunciaestadousuario have same columns
+[Info]2022/06/02 13:34:05 both tables exp_pre_Dependencia have same columns
+[Info]2022/06/02 13:34:06 both tables exp_pre_Dependenciaestado have same columns
+[Info]2022/06/02 13:34:07 both tables exp_pre_Dependenciatipo have same columns
+[Info]2022/06/02 13:34:07 both tables exp_pre_Depositodependencia have same columns
+[Info]2022/06/02 13:34:08 database: siis table: exp_pre_Diligencia different columns: 1
+[Info]2022/06/02 13:34:08 ALTER TABLE `exp_pre_Diligencia` ADD COLUMN `CreatorID` varchar(50) NULL DEFAULT NULL AFTER `OrderTablePrint`;
+[Info]2022/06/02 13:34:08 database: siistesting table: exp_pre_Diligencia different columns: 0
+[Info]2022/06/02 13:34:09 both tables exp_pre_Diligenciaestado have same columns
+[Info]2022/06/02 13:34:10 both tables exp_pre_Domicilio have same columns
+[Info]2022/06/02 13:34:10 both tables exp_pre_Efecto have same columns
+[Info]2022/06/02 13:34:11 both tables exp_pre_Efectodenuncia have same columns
+[Info]2022/06/02 13:34:12 both tables exp_pre_Efectodenunciaestado have same columns
+[Info]2022/06/02 13:34:13 both tables exp_pre_Efectodepositodependencia have same columns
+[Info]2022/06/02 13:34:13 both tables exp_pre_Efectoestado have same columns
+[Info]2022/06/02 13:34:14 both tables exp_pre_Efectosecuestrado have same columns
+[Info]2022/06/02 13:34:15 both tables exp_pre_Encargadodeposito have same columns
+[Info]2022/06/02 13:34:15 both tables exp_pre_Estadocivil have same columns
+[Info]2022/06/02 13:34:16 both tables exp_pre_Estadocivilpersona have same columns
+[Info]2022/06/02 13:34:17 both tables exp_pre_Estadodenuncia have same columns
+[Info]2022/06/02 13:34:18 both tables exp_pre_Estadodependencia have same columns
+[Info]2022/06/02 13:34:18 both tables exp_pre_Estadodiligencia have same columns
+[Info]2022/06/02 13:34:19 both tables exp_pre_Estadoefecto have same columns
+[Info]2022/06/02 13:34:20 both tables exp_pre_Estadoefectodenuncia have same columns
+[Info]2022/06/02 13:34:21 both tables exp_pre_Estadojuzgado have same columns
+[Info]2022/06/02 13:34:21 both tables exp_pre_Estadosumario have same columns
+[Info]2022/06/02 13:34:22 both tables exp_pre_Estadousuario have same columns
+[Info]2022/06/02 13:34:23 both tables exp_pre_Formacion have same columns
+[Info]2022/06/02 13:34:23 both tables exp_pre_Formacionpersona have same columns
+[Info]2022/06/02 13:34:24 both tables exp_pre_Formato have same columns
+[Info]2022/06/02 13:34:25 both tables exp_pre_Genero have same columns
+[Info]2022/06/02 13:34:26 both tables exp_pre_Generopersona have same columns
+[Info]2022/06/02 13:34:26 both tables exp_pre_Hecho have same columns
+[Info]2022/06/02 13:34:27 both tables exp_pre_Hechoubicacion have same columns
+[Info]2022/06/02 13:34:28 both tables exp_pre_Identikit have same columns
+[Info]2022/06/02 13:34:29 both tables exp_pre_ImpresionComisaria have same columns
+[Info]2022/06/02 13:34:29 both tables exp_pre_Jerarquia have same columns
+[Info]2022/06/02 13:34:30 both tables exp_pre_Jerarquiadependencia have same columns
+[Info]2022/06/02 13:34:31 both tables exp_pre_Jerarquiadependenciaautoridad have same columns
+[Info]2022/06/02 13:34:31 both tables exp_pre_Jerarquiajuzgado have same columns
+[Info]2022/06/02 13:34:32 both tables exp_pre_Jerarquiausuario have same columns
+[Info]2022/06/02 13:34:33 both tables exp_pre_Jurisdiccion have same columns
+[Info]2022/06/02 13:34:34 both tables exp_pre_Juzgado have same columns
+[Info]2022/06/02 13:34:34 both tables exp_pre_Juzgadoestado have same columns
+[Info]2022/06/02 13:34:35 both tables exp_pre_Juzgadotipojuzgado have same columns
+[Info]2022/06/02 13:34:36 both tables exp_pre_Ley have same columns
+[Info]2022/06/02 13:34:37 both tables exp_pre_Localidad have same columns
+[Info]2022/06/02 13:34:37 both tables exp_pre_Moatributomo have same columns
+[Info]2022/06/02 13:34:38 both tables exp_pre_Modusoperandi have same columns
+[Info]2022/06/02 13:34:39 both tables exp_pre_Ocupacion have same columns
+[Info]2022/06/02 13:34:39 both tables exp_pre_Ocupacionpersona have same columns
+[Info]2022/06/02 13:34:40 both tables exp_pre_Pais have same columns
+[Info]2022/06/02 13:34:41 both tables exp_pre_Permisotipousuario have same columns
+[Info]2022/06/02 13:34:42 both tables exp_pre_Permisousuario have same columns
+[Info]2022/06/02 13:34:42 both tables exp_pre_Personadomicilio have same columns
+[Info]2022/06/02 13:34:43 both tables exp_pre_Personafisica have same columns
+[Info]2022/06/02 13:34:44 both tables exp_pre_Personajuridica have same columns
+[Info]2022/06/02 13:34:44 both tables exp_pre_PersonalInterviniente have same columns
+[Info]2022/06/02 13:34:45 both tables exp_pre_Prorrogasumario have same columns
+[Info]2022/06/02 13:34:46 both tables exp_pre_Protagonistas have same columns
+[Info]2022/06/02 13:34:47 both tables exp_pre_Provincia have same columns
+[Info]2022/06/02 13:34:47 both tables exp_pre_Roldependenciasumario have same columns
+[Info]2022/06/02 13:34:48 both tables exp_pre_Rolesdenuncia have same columns
+[Info]2022/06/02 13:34:49 both tables exp_pre_Roljuzgadosumario have same columns
+[Info]2022/06/02 13:34:50 both tables exp_pre_Rolpersonadenuncia have same columns
+[Info]2022/06/02 13:34:50 both tables exp_pre_Roltipodenuncia have same columns
+[Info]2022/06/02 13:34:51 both tables exp_pre_Siniestrovial have same columns
+[Info]2022/06/02 13:34:52 database: siis table: exp_pre_Sumario different columns: 1
+[Info]2022/06/02 13:34:52 ALTER TABLE `exp_pre_Sumario` ADD COLUMN `CreatorID` varchar(50) NULL DEFAULT NULL AFTER `CausaCaratula`;
+[Info]2022/06/02 13:34:52 database: siistesting table: exp_pre_Sumario different columns: 0
+[Info]2022/06/02 13:34:52 both tables exp_pre_SumarioArticulos have same columns
+[Info]2022/06/02 13:34:53 both tables exp_pre_Sumarioarchivo have same columns
+[Info]2022/06/02 13:34:54 both tables exp_pre_Sumarioestado have same columns
+[Info]2022/06/02 13:34:55 both tables exp_pre_Tamañoseccion have same columns
+[Info]2022/06/02 13:34:55 both tables exp_pre_Teate have same columns
+[Info]2022/06/02 13:34:56 both tables exp_pre_Teavalor have same columns
+[Info]2022/06/02 13:34:57 both tables exp_pre_Teavtea have same columns
+[Info]2022/06/02 13:34:58 both tables exp_pre_Tipocausacaratula have same columns
+[Info]2022/06/02 13:34:58 both tables exp_pre_Tipodenuncia have same columns
+[Info]2022/06/02 13:34:59 both tables exp_pre_Tipodiligencia have same columns
+[Info]2022/06/02 13:35:00 both tables exp_pre_Tipodiligenciaatributo have same columns
+[Info]2022/06/02 13:35:01 both tables exp_pre_Tipodiligenciaatributovalor have same columns
+[Info]2022/06/02 13:35:02 both tables exp_pre_Tipodocumento have same columns
+[Info]2022/06/02 13:35:03 both tables exp_pre_Tipoefecto have same columns
+[Info]2022/06/02 13:35:03 both tables exp_pre_Tipoefectoatributo have same columns
+[Info]2022/06/02 13:35:04 both tables exp_pre_Tipojuzgado have same columns
+[Info]2022/06/02 13:35:05 both tables exp_pre_Tipolugar have same columns
+[Info]2022/06/02 13:35:05 both tables exp_pre_Tipomodusoperandi have same columns
+[Info]2022/06/02 13:35:06 both tables exp_pre_Tipomoneda have same columns
+[Info]2022/06/02 13:35:07 both tables exp_pre_Tiposumario have same columns
+[Info]2022/06/02 13:35:08 both tables exp_pre_Tipousuario have same columns
+[Info]2022/06/02 13:35:08 both tables exp_pre_Ubicacion have same columns
+[Info]2022/06/02 13:35:09 both tables exp_pre_Usuario have same columns
+[Info]2022/06/02 13:35:10 both tables exp_pre_Usuarioestado have same columns
+[Info]2022/06/02 13:35:10 both tables exp_pre_Usuariosumario have same columns
+[Info]2022/06/02 13:35:11 both tables exp_pre_Valoratributomo have same columns
+[Info]2022/06/02 13:35:12 both tables exp_pre_Vehiculos have same columns
+[Info]2022/06/02 13:35:13 database: siis table: exp_pre_archivopdf different columns: 1
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/02 13:35:13 database: siistesting table: exp_pre_archivopdf different columns: 8
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `ArchivopdfID` varchar(60) NOT NULL DEFAULT NULL;
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Nombre` varchar(100) NULL DEFAULT NULL AFTER `ArchivopdfID`;
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Tipo` varchar(100) NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Detalle` varchar(500) NULL DEFAULT NULL AFTER `Tipo`;
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL AFTER `Detalle`;
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Fechainivig` datetime NOT NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Filename` varchar(150) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Extension` varchar(6) NULL DEFAULT NULL AFTER `Filename`;

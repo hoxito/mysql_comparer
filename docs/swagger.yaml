@@ -55,6 +55,37 @@ paths:
       summary: Gets the difference between 2 databases
       tags:
       - getdiff
+  /v1/db/simple/diff/notables:
+    get:
+      consumes:
+      - application/json
+      description: differenciates databases
+      parameters:
+      - description: string valid
+        in: query
+        maxLength: 10
+        minLength: 5
+        name: string
+        type: string
+      - description: int valid
+        in: query
+        maximum: 10
+        minimum: 1
+        name: int
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.TableDiff'
+            type: array
+      summary: Gets the difference between 2 databases without showing every table
+        in both dbs
+      tags:
+      - getdiff
 securityDefinitions:
   BasicAuth:
     type: basic
