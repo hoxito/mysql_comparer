@@ -1,2 +1,4 @@
 config.toml
 .env
+./.history
+.history
