@@ -1,133 +1,258 @@
-[Info]2022/06/02 13:33:51 Loading siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com/siis 
-[Info]2022/06/02 13:33:52 Loading siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com/siistesting
-[Info]2022/06/02 13:33:55 database: siis table: exp_pre_Archivopdf different columns: 8
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `ArchivopdfID` varchar(60) NOT NULL DEFAULT NULL;
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Nombre` varchar(100) NULL DEFAULT NULL AFTER `ArchivopdfID`;
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Tipo` varchar(100) NULL DEFAULT NULL AFTER `Nombre`;
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Detalle` varchar(500) NULL DEFAULT NULL AFTER `Tipo`;
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL AFTER `Detalle`;
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Fechainivig` datetime NOT NULL DEFAULT NULL AFTER `Fechafinvig`;
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Filename` varchar(150) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `Extension` varchar(6) NULL DEFAULT NULL AFTER `Filename`;
-[Info]2022/06/02 13:33:55 database: siistesting table: exp_pre_Archivopdf different columns: 1
-[Info]2022/06/02 13:33:55 ALTER TABLE `exp_pre_Archivopdf` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
-[Info]2022/06/02 13:33:56 both tables exp_pre_Articulos have same columns
-[Info]2022/06/02 13:33:56 both tables exp_pre_Atributomo have same columns
-[Info]2022/06/02 13:33:57 both tables exp_pre_Autoridaddependencia have same columns
-[Info]2022/06/02 13:33:58 both tables exp_pre_Autoridadjuzgado have same columns
-[Info]2022/06/02 13:33:59 both tables exp_pre_Barrio have same columns
-[Info]2022/06/02 13:33:59 both tables exp_pre_Calle have same columns
-[Info]2022/06/02 13:34:00 both tables exp_pre_Caratula have same columns
-[Info]2022/06/02 13:34:01 both tables exp_pre_Coincidenciaefecto have same columns
-[Info]2022/06/02 13:34:02 both tables exp_pre_Contrasena have same columns
-[Info]2022/06/02 13:34:02 both tables exp_pre_Cuadrante have same columns
-[Info]2022/06/02 13:34:03 both tables exp_pre_Datatype1 have same columns
-[Info]2022/06/02 13:34:04 both tables exp_pre_Denuncia have same columns
-[Info]2022/06/02 13:34:05 both tables exp_pre_Denunciaestadousuario have same columns
-[Info]2022/06/02 13:34:05 both tables exp_pre_Dependencia have same columns
-[Info]2022/06/02 13:34:06 both tables exp_pre_Dependenciaestado have same columns
-[Info]2022/06/02 13:34:07 both tables exp_pre_Dependenciatipo have same columns
-[Info]2022/06/02 13:34:07 both tables exp_pre_Depositodependencia have same columns
-[Info]2022/06/02 13:34:08 database: siis table: exp_pre_Diligencia different columns: 1
-[Info]2022/06/02 13:34:08 ALTER TABLE `exp_pre_Diligencia` ADD COLUMN `CreatorID` varchar(50) NULL DEFAULT NULL AFTER `OrderTablePrint`;
-[Info]2022/06/02 13:34:08 database: siistesting table: exp_pre_Diligencia different columns: 0
-[Info]2022/06/02 13:34:09 both tables exp_pre_Diligenciaestado have same columns
-[Info]2022/06/02 13:34:10 both tables exp_pre_Domicilio have same columns
-[Info]2022/06/02 13:34:10 both tables exp_pre_Efecto have same columns
-[Info]2022/06/02 13:34:11 both tables exp_pre_Efectodenuncia have same columns
-[Info]2022/06/02 13:34:12 both tables exp_pre_Efectodenunciaestado have same columns
-[Info]2022/06/02 13:34:13 both tables exp_pre_Efectodepositodependencia have same columns
-[Info]2022/06/02 13:34:13 both tables exp_pre_Efectoestado have same columns
-[Info]2022/06/02 13:34:14 both tables exp_pre_Efectosecuestrado have same columns
-[Info]2022/06/02 13:34:15 both tables exp_pre_Encargadodeposito have same columns
-[Info]2022/06/02 13:34:15 both tables exp_pre_Estadocivil have same columns
-[Info]2022/06/02 13:34:16 both tables exp_pre_Estadocivilpersona have same columns
-[Info]2022/06/02 13:34:17 both tables exp_pre_Estadodenuncia have same columns
-[Info]2022/06/02 13:34:18 both tables exp_pre_Estadodependencia have same columns
-[Info]2022/06/02 13:34:18 both tables exp_pre_Estadodiligencia have same columns
-[Info]2022/06/02 13:34:19 both tables exp_pre_Estadoefecto have same columns
-[Info]2022/06/02 13:34:20 both tables exp_pre_Estadoefectodenuncia have same columns
-[Info]2022/06/02 13:34:21 both tables exp_pre_Estadojuzgado have same columns
-[Info]2022/06/02 13:34:21 both tables exp_pre_Estadosumario have same columns
-[Info]2022/06/02 13:34:22 both tables exp_pre_Estadousuario have same columns
-[Info]2022/06/02 13:34:23 both tables exp_pre_Formacion have same columns
-[Info]2022/06/02 13:34:23 both tables exp_pre_Formacionpersona have same columns
-[Info]2022/06/02 13:34:24 both tables exp_pre_Formato have same columns
-[Info]2022/06/02 13:34:25 both tables exp_pre_Genero have same columns
-[Info]2022/06/02 13:34:26 both tables exp_pre_Generopersona have same columns
-[Info]2022/06/02 13:34:26 both tables exp_pre_Hecho have same columns
-[Info]2022/06/02 13:34:27 both tables exp_pre_Hechoubicacion have same columns
-[Info]2022/06/02 13:34:28 both tables exp_pre_Identikit have same columns
-[Info]2022/06/02 13:34:29 both tables exp_pre_ImpresionComisaria have same columns
-[Info]2022/06/02 13:34:29 both tables exp_pre_Jerarquia have same columns
-[Info]2022/06/02 13:34:30 both tables exp_pre_Jerarquiadependencia have same columns
-[Info]2022/06/02 13:34:31 both tables exp_pre_Jerarquiadependenciaautoridad have same columns
-[Info]2022/06/02 13:34:31 both tables exp_pre_Jerarquiajuzgado have same columns
-[Info]2022/06/02 13:34:32 both tables exp_pre_Jerarquiausuario have same columns
-[Info]2022/06/02 13:34:33 both tables exp_pre_Jurisdiccion have same columns
-[Info]2022/06/02 13:34:34 both tables exp_pre_Juzgado have same columns
-[Info]2022/06/02 13:34:34 both tables exp_pre_Juzgadoestado have same columns
-[Info]2022/06/02 13:34:35 both tables exp_pre_Juzgadotipojuzgado have same columns
-[Info]2022/06/02 13:34:36 both tables exp_pre_Ley have same columns
-[Info]2022/06/02 13:34:37 both tables exp_pre_Localidad have same columns
-[Info]2022/06/02 13:34:37 both tables exp_pre_Moatributomo have same columns
-[Info]2022/06/02 13:34:38 both tables exp_pre_Modusoperandi have same columns
-[Info]2022/06/02 13:34:39 both tables exp_pre_Ocupacion have same columns
-[Info]2022/06/02 13:34:39 both tables exp_pre_Ocupacionpersona have same columns
-[Info]2022/06/02 13:34:40 both tables exp_pre_Pais have same columns
-[Info]2022/06/02 13:34:41 both tables exp_pre_Permisotipousuario have same columns
-[Info]2022/06/02 13:34:42 both tables exp_pre_Permisousuario have same columns
-[Info]2022/06/02 13:34:42 both tables exp_pre_Personadomicilio have same columns
-[Info]2022/06/02 13:34:43 both tables exp_pre_Personafisica have same columns
-[Info]2022/06/02 13:34:44 both tables exp_pre_Personajuridica have same columns
-[Info]2022/06/02 13:34:44 both tables exp_pre_PersonalInterviniente have same columns
-[Info]2022/06/02 13:34:45 both tables exp_pre_Prorrogasumario have same columns
-[Info]2022/06/02 13:34:46 both tables exp_pre_Protagonistas have same columns
-[Info]2022/06/02 13:34:47 both tables exp_pre_Provincia have same columns
-[Info]2022/06/02 13:34:47 both tables exp_pre_Roldependenciasumario have same columns
-[Info]2022/06/02 13:34:48 both tables exp_pre_Rolesdenuncia have same columns
-[Info]2022/06/02 13:34:49 both tables exp_pre_Roljuzgadosumario have same columns
-[Info]2022/06/02 13:34:50 both tables exp_pre_Rolpersonadenuncia have same columns
-[Info]2022/06/02 13:34:50 both tables exp_pre_Roltipodenuncia have same columns
-[Info]2022/06/02 13:34:51 both tables exp_pre_Siniestrovial have same columns
-[Info]2022/06/02 13:34:52 database: siis table: exp_pre_Sumario different columns: 1
-[Info]2022/06/02 13:34:52 ALTER TABLE `exp_pre_Sumario` ADD COLUMN `CreatorID` varchar(50) NULL DEFAULT NULL AFTER `CausaCaratula`;
-[Info]2022/06/02 13:34:52 database: siistesting table: exp_pre_Sumario different columns: 0
-[Info]2022/06/02 13:34:52 both tables exp_pre_SumarioArticulos have same columns
-[Info]2022/06/02 13:34:53 both tables exp_pre_Sumarioarchivo have same columns
-[Info]2022/06/02 13:34:54 both tables exp_pre_Sumarioestado have same columns
-[Info]2022/06/02 13:34:55 both tables exp_pre_Tamañoseccion have same columns
-[Info]2022/06/02 13:34:55 both tables exp_pre_Teate have same columns
-[Info]2022/06/02 13:34:56 both tables exp_pre_Teavalor have same columns
-[Info]2022/06/02 13:34:57 both tables exp_pre_Teavtea have same columns
-[Info]2022/06/02 13:34:58 both tables exp_pre_Tipocausacaratula have same columns
-[Info]2022/06/02 13:34:58 both tables exp_pre_Tipodenuncia have same columns
-[Info]2022/06/02 13:34:59 both tables exp_pre_Tipodiligencia have same columns
-[Info]2022/06/02 13:35:00 both tables exp_pre_Tipodiligenciaatributo have same columns
-[Info]2022/06/02 13:35:01 both tables exp_pre_Tipodiligenciaatributovalor have same columns
-[Info]2022/06/02 13:35:02 both tables exp_pre_Tipodocumento have same columns
-[Info]2022/06/02 13:35:03 both tables exp_pre_Tipoefecto have same columns
-[Info]2022/06/02 13:35:03 both tables exp_pre_Tipoefectoatributo have same columns
-[Info]2022/06/02 13:35:04 both tables exp_pre_Tipojuzgado have same columns
-[Info]2022/06/02 13:35:05 both tables exp_pre_Tipolugar have same columns
-[Info]2022/06/02 13:35:05 both tables exp_pre_Tipomodusoperandi have same columns
-[Info]2022/06/02 13:35:06 both tables exp_pre_Tipomoneda have same columns
-[Info]2022/06/02 13:35:07 both tables exp_pre_Tiposumario have same columns
-[Info]2022/06/02 13:35:08 both tables exp_pre_Tipousuario have same columns
-[Info]2022/06/02 13:35:08 both tables exp_pre_Ubicacion have same columns
-[Info]2022/06/02 13:35:09 both tables exp_pre_Usuario have same columns
-[Info]2022/06/02 13:35:10 both tables exp_pre_Usuarioestado have same columns
-[Info]2022/06/02 13:35:10 both tables exp_pre_Usuariosumario have same columns
-[Info]2022/06/02 13:35:11 both tables exp_pre_Valoratributomo have same columns
-[Info]2022/06/02 13:35:12 both tables exp_pre_Vehiculos have same columns
-[Info]2022/06/02 13:35:13 database: siis table: exp_pre_archivopdf different columns: 1
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
-[Info]2022/06/02 13:35:13 database: siistesting table: exp_pre_archivopdf different columns: 8
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `ArchivopdfID` varchar(60) NOT NULL DEFAULT NULL;
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Nombre` varchar(100) NULL DEFAULT NULL AFTER `ArchivopdfID`;
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Tipo` varchar(100) NULL DEFAULT NULL AFTER `Nombre`;
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Detalle` varchar(500) NULL DEFAULT NULL AFTER `Tipo`;
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL AFTER `Detalle`;
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Fechainivig` datetime NOT NULL DEFAULT NULL AFTER `Fechafinvig`;
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Filename` varchar(150) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
-[Info]2022/06/02 13:35:13 ALTER TABLE `exp_pre_archivopdf` ADD COLUMN `Extension` varchar(6) NULL DEFAULT NULL AFTER `Filename`;
+[Info]2022/06/29 10:21:27 Loading siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com/siis 
+[Info]2022/06/29 10:21:28 Loading siistesting.c36dahs0arhc.us-east-1.rds.amazonaws.com/siistesting
+[Info]2022/06/29 10:21:32 both tables exp_pre_Archivopdf have same columns
+[Info]2022/06/29 10:21:32 both tables exp_pre_Articulos have same columns
+[Info]2022/06/29 10:21:33 database: siis table: exp_pre_Atributomo different columns: 1
+[Info]2022/06/29 10:21:33 ALTER TABLE `exp_pre_Atributomo` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:33 database: siistesting table: exp_pre_Atributomo different columns: 2
+[Info]2022/06/29 10:21:33 ALTER TABLE `exp_pre_Atributomo` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:33 ALTER TABLE `exp_pre_Atributomo` ADD COLUMN `AtributomoID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:21:34 database: siis table: exp_pre_Autoridaddependencia different columns: 1
+[Info]2022/06/29 10:21:34 ALTER TABLE `exp_pre_Autoridaddependencia` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:34 database: siistesting table: exp_pre_Autoridaddependencia different columns: 4
+[Info]2022/06/29 10:21:34 ALTER TABLE `exp_pre_Autoridaddependencia` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:34 ALTER TABLE `exp_pre_Autoridaddependencia` ADD COLUMN `Fechainivig` datetime NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/29 10:21:34 ALTER TABLE `exp_pre_Autoridaddependencia` ADD COLUMN `AutoridaddependenciaID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/29 10:21:34 ALTER TABLE `exp_pre_Autoridaddependencia` ADD COLUMN `DependenciaID` varchar(50) NOT NULL DEFAULT NULL AFTER `AutoridaddependenciaID`;
+[Info]2022/06/29 10:21:35 database: siis table: exp_pre_Autoridadjuzgado different columns: 1
+[Info]2022/06/29 10:21:35 ALTER TABLE `exp_pre_Autoridadjuzgado` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:35 database: siistesting table: exp_pre_Autoridadjuzgado different columns: 6
+[Info]2022/06/29 10:21:35 ALTER TABLE `exp_pre_Autoridadjuzgado` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:35 ALTER TABLE `exp_pre_Autoridadjuzgado` ADD COLUMN `Fechainivig` datetime NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/29 10:21:35 ALTER TABLE `exp_pre_Autoridadjuzgado` ADD COLUMN `AutoridadjuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/29 10:21:35 ALTER TABLE `exp_pre_Autoridadjuzgado` ADD COLUMN `JuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `AutoridadjuzgadoID`;
+[Info]2022/06/29 10:21:35 ALTER TABLE `exp_pre_Autoridadjuzgado` ADD COLUMN `JerarquiajuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `JuzgadoID`;
+[Info]2022/06/29 10:21:35 ALTER TABLE `exp_pre_Autoridadjuzgado` ADD COLUMN `PersonafisicaID` varchar(50) NULL DEFAULT NULL AFTER `JerarquiajuzgadoID`;
+[Info]2022/06/29 10:21:35 both tables exp_pre_Barrio have same columns
+[Info]2022/06/29 10:21:36 both tables exp_pre_Calle have same columns
+[Info]2022/06/29 10:21:37 database: siis table: exp_pre_Caratula different columns: 1
+[Info]2022/06/29 10:21:37 ALTER TABLE `exp_pre_Caratula` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:37 database: siistesting table: exp_pre_Caratula different columns: 5
+[Info]2022/06/29 10:21:37 ALTER TABLE `exp_pre_Caratula` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:37 ALTER TABLE `exp_pre_Caratula` ADD COLUMN `Fechainivig` datetime NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/29 10:21:37 ALTER TABLE `exp_pre_Caratula` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/29 10:21:37 ALTER TABLE `exp_pre_Caratula` ADD COLUMN `CaratulaID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:21:37 ALTER TABLE `exp_pre_Caratula` ADD COLUMN `FormatoID` varchar(50) NOT NULL DEFAULT NULL AFTER `CaratulaID`;
+[Info]2022/06/29 10:21:37 both tables exp_pre_Coincidenciaefecto have same columns
+[Info]2022/06/29 10:21:38 both tables exp_pre_Contrasena have same columns
+[Info]2022/06/29 10:21:39 both tables exp_pre_Cuadrante have same columns
+[Info]2022/06/29 10:21:39 database: siis table: exp_pre_Datatype1 different columns: 1
+[Info]2022/06/29 10:21:39 ALTER TABLE `exp_pre_Datatype1` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:39 database: siistesting table: exp_pre_Datatype1 different columns: 1
+[Info]2022/06/29 10:21:39 ALTER TABLE `exp_pre_Datatype1` ADD COLUMN `Datatype1ID` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:40 database: siis table: exp_pre_Denuncia different columns: 2
+[Info]2022/06/29 10:21:40 ALTER TABLE `exp_pre_Denuncia` ADD COLUMN `Relato2` mediumtext NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:21:40 ALTER TABLE `exp_pre_Denuncia` ADD COLUMN `Error` varchar(45) NOT NULL DEFAULT NULL AFTER `Relato`;
+[Info]2022/06/29 10:21:40 database: siistesting table: exp_pre_Denuncia different columns: 0
+[Info]2022/06/29 10:21:41 database: siis table: exp_pre_Denunciaestadousuario different columns: 1
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:41 database: siistesting table: exp_pre_Denunciaestadousuario different columns: 8
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `Descripcion` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `Fechadesde` datetime NULL DEFAULT NULL AFTER `Descripcion`;
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `Fechahasta` datetime NULL DEFAULT NULL AFTER `Fechadesde`;
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `Texto` varchar(50) NULL DEFAULT NULL AFTER `Fechahasta`;
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `DenunciaestadousuarioID` varchar(50) NOT NULL DEFAULT NULL AFTER `Texto`;
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `DenunciaID` varchar(50) NOT NULL DEFAULT NULL AFTER `DenunciaestadousuarioID`;
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `EstadodenunciaID` varchar(50) NOT NULL DEFAULT NULL AFTER `DenunciaID`;
+[Info]2022/06/29 10:21:41 ALTER TABLE `exp_pre_Denunciaestadousuario` ADD COLUMN `UsuarioID` varchar(50) NOT NULL DEFAULT NULL AFTER `EstadodenunciaID`;
+[Info]2022/06/29 10:21:41 both tables exp_pre_Dependencia have same columns
+[Info]2022/06/29 10:21:42 both tables exp_pre_Dependenciaestado have same columns
+[Info]2022/06/29 10:21:43 both tables exp_pre_Dependenciatipo have same columns
+[Info]2022/06/29 10:21:43 both tables exp_pre_Depositodependencia have same columns
+[Info]2022/06/29 10:21:44 database: siis table: exp_pre_Diligencia different columns: 1
+[Info]2022/06/29 10:21:44 ALTER TABLE `exp_pre_Diligencia` ADD COLUMN `UsuarioID` varchar(50) NULL DEFAULT NULL AFTER `TamanoSangria`;
+[Info]2022/06/29 10:21:44 database: siistesting table: exp_pre_Diligencia different columns: 0
+[Info]2022/06/29 10:21:45 both tables exp_pre_Diligenciaestado have same columns
+[Info]2022/06/29 10:21:45 both tables exp_pre_Domicilio have same columns
+[Info]2022/06/29 10:21:46 both tables exp_pre_Efecto have same columns
+[Info]2022/06/29 10:21:47 both tables exp_pre_Efectodenuncia have same columns
+[Info]2022/06/29 10:21:48 both tables exp_pre_Efectodenunciaestado have same columns
+[Info]2022/06/29 10:21:48 both tables exp_pre_Efectodepositodependencia have same columns
+[Info]2022/06/29 10:21:49 both tables exp_pre_Efectoestado have same columns
+[Info]2022/06/29 10:21:50 both tables exp_pre_Efectosecuestrado have same columns
+[Info]2022/06/29 10:21:51 both tables exp_pre_Encargadodeposito have same columns
+[Info]2022/06/29 10:21:51 database: siis table: exp_pre_Estadocivil different columns: 1
+[Info]2022/06/29 10:21:51 ALTER TABLE `exp_pre_Estadocivil` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:51 database: siistesting table: exp_pre_Estadocivil different columns: 2
+[Info]2022/06/29 10:21:51 ALTER TABLE `exp_pre_Estadocivil` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:51 ALTER TABLE `exp_pre_Estadocivil` ADD COLUMN `EstadocivilID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:21:52 database: siis table: exp_pre_Estadocivilpersona different columns: 1
+[Info]2022/06/29 10:21:52 ALTER TABLE `exp_pre_Estadocivilpersona` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:52 database: siistesting table: exp_pre_Estadocivilpersona different columns: 5
+[Info]2022/06/29 10:21:52 ALTER TABLE `exp_pre_Estadocivilpersona` ADD COLUMN `Fechadesde` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:52 ALTER TABLE `exp_pre_Estadocivilpersona` ADD COLUMN `Fechahasta` datetime NULL DEFAULT NULL AFTER `Fechadesde`;
+[Info]2022/06/29 10:21:52 ALTER TABLE `exp_pre_Estadocivilpersona` ADD COLUMN `EstadocivilpersonaID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechahasta`;
+[Info]2022/06/29 10:21:52 ALTER TABLE `exp_pre_Estadocivilpersona` ADD COLUMN `EstadocivilID` varchar(50) NOT NULL DEFAULT NULL AFTER `EstadocivilpersonaID`;
+[Info]2022/06/29 10:21:52 ALTER TABLE `exp_pre_Estadocivilpersona` ADD COLUMN `PersonafisicaID` varchar(50) NOT NULL DEFAULT NULL AFTER `EstadocivilID`;
+[Info]2022/06/29 10:21:53 both tables exp_pre_Estadodenuncia have same columns
+[Info]2022/06/29 10:21:53 both tables exp_pre_Estadodependencia have same columns
+[Info]2022/06/29 10:21:54 both tables exp_pre_Estadodiligencia have same columns
+[Info]2022/06/29 10:21:55 both tables exp_pre_Estadoefecto have same columns
+[Info]2022/06/29 10:21:55 both tables exp_pre_Estadoefectodenuncia have same columns
+[Info]2022/06/29 10:21:56 database: siis table: exp_pre_Estadojuzgado different columns: 1
+[Info]2022/06/29 10:21:56 ALTER TABLE `exp_pre_Estadojuzgado` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:56 database: siistesting table: exp_pre_Estadojuzgado different columns: 5
+[Info]2022/06/29 10:21:56 ALTER TABLE `exp_pre_Estadojuzgado` ADD COLUMN `Descripcion` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:56 ALTER TABLE `exp_pre_Estadojuzgado` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL AFTER `Descripcion`;
+[Info]2022/06/29 10:21:56 ALTER TABLE `exp_pre_Estadojuzgado` ADD COLUMN `Fechainivig` datetime NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/29 10:21:56 ALTER TABLE `exp_pre_Estadojuzgado` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/29 10:21:56 ALTER TABLE `exp_pre_Estadojuzgado` ADD COLUMN `EstadojuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:21:57 both tables exp_pre_Estadosumario have same columns
+[Info]2022/06/29 10:21:57 both tables exp_pre_Estadousuario have same columns
+[Info]2022/06/29 10:21:58 database: siis table: exp_pre_Formacion different columns: 1
+[Info]2022/06/29 10:21:58 ALTER TABLE `exp_pre_Formacion` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:58 database: siistesting table: exp_pre_Formacion different columns: 3
+[Info]2022/06/29 10:21:58 ALTER TABLE `exp_pre_Formacion` ADD COLUMN `Descripcion` text NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:58 ALTER TABLE `exp_pre_Formacion` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL AFTER `Descripcion`;
+[Info]2022/06/29 10:21:58 ALTER TABLE `exp_pre_Formacion` ADD COLUMN `FormacionID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:21:59 database: siis table: exp_pre_Formacionpersona different columns: 1
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formacionpersona` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:59 database: siistesting table: exp_pre_Formacionpersona different columns: 5
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formacionpersona` ADD COLUMN `Fechadesde` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formacionpersona` ADD COLUMN `Fechahasta` datetime NULL DEFAULT NULL AFTER `Fechadesde`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formacionpersona` ADD COLUMN `FormacionpersonaID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechahasta`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formacionpersona` ADD COLUMN `FormacionID` varchar(50) NOT NULL DEFAULT NULL AFTER `FormacionpersonaID`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formacionpersona` ADD COLUMN `PersonafisicaID` varchar(50) NOT NULL DEFAULT NULL AFTER `FormacionID`;
+[Info]2022/06/29 10:21:59 database: siis table: exp_pre_Formato different columns: 1
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:59 database: siistesting table: exp_pre_Formato different columns: 11
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Detalles` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Fuente` varchar(50) NULL DEFAULT NULL AFTER `Detalles`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Inferior` double(10,2) NULL DEFAULT NULL AFTER `Fuente`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Interlineado` double(10,2) NULL DEFAULT NULL AFTER `Inferior`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL AFTER `Interlineado`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Sangriaderecha` double(10,2) NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Sangriaizquierda` double(10,2) NULL DEFAULT NULL AFTER `Sangriaderecha`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Superior` double(10,2) NULL DEFAULT NULL AFTER `Sangriaizquierda`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `Tamañopagina` varchar(50) NULL DEFAULT NULL AFTER `Superior`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `FormatoID` varchar(50) NOT NULL DEFAULT NULL AFTER `Tamañopagina`;
+[Info]2022/06/29 10:21:59 ALTER TABLE `exp_pre_Formato` ADD COLUMN `TamañoseccionID` varchar(50) NOT NULL DEFAULT NULL AFTER `FormatoID`;
+[Info]2022/06/29 10:22:00 database: siis table: exp_pre_Genero different columns: 1
+[Info]2022/06/29 10:22:00 ALTER TABLE `exp_pre_Genero` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:00 database: siistesting table: exp_pre_Genero different columns: 2
+[Info]2022/06/29 10:22:00 ALTER TABLE `exp_pre_Genero` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:00 ALTER TABLE `exp_pre_Genero` ADD COLUMN `GeneroID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:22:01 database: siis table: exp_pre_Generopersona different columns: 1
+[Info]2022/06/29 10:22:01 ALTER TABLE `exp_pre_Generopersona` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:01 database: siistesting table: exp_pre_Generopersona different columns: 5
+[Info]2022/06/29 10:22:01 ALTER TABLE `exp_pre_Generopersona` ADD COLUMN `Fechadesde` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:01 ALTER TABLE `exp_pre_Generopersona` ADD COLUMN `Fechahasta` datetime NULL DEFAULT NULL AFTER `Fechadesde`;
+[Info]2022/06/29 10:22:01 ALTER TABLE `exp_pre_Generopersona` ADD COLUMN `GeneropersonaID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechahasta`;
+[Info]2022/06/29 10:22:01 ALTER TABLE `exp_pre_Generopersona` ADD COLUMN `GeneroID` varchar(50) NOT NULL DEFAULT NULL AFTER `GeneropersonaID`;
+[Info]2022/06/29 10:22:01 ALTER TABLE `exp_pre_Generopersona` ADD COLUMN `PersonafisicaID` varchar(50) NOT NULL DEFAULT NULL AFTER `GeneroID`;
+[Info]2022/06/29 10:22:01 both tables exp_pre_Hecho have same columns
+[Info]2022/06/29 10:22:03 both tables exp_pre_Hechoubicacion have same columns
+[Info]2022/06/29 10:22:03 both tables exp_pre_Identikit have same columns
+[Info]2022/06/29 10:22:04 both tables exp_pre_ImpresionComisaria have same columns
+[Info]2022/06/29 10:22:05 database: siis table: exp_pre_Jerarquia different columns: 1
+[Info]2022/06/29 10:22:05 ALTER TABLE `exp_pre_Jerarquia` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:05 database: siistesting table: exp_pre_Jerarquia different columns: 2
+[Info]2022/06/29 10:22:05 ALTER TABLE `exp_pre_Jerarquia` ADD COLUMN `Nombrejerarquia` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:05 ALTER TABLE `exp_pre_Jerarquia` ADD COLUMN `JerarquiaID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombrejerarquia`;
+[Info]2022/06/29 10:22:05 database: siis table: exp_pre_Jerarquiadependencia different columns: 1
+[Info]2022/06/29 10:22:05 ALTER TABLE `exp_pre_Jerarquiadependencia` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:05 database: siistesting table: exp_pre_Jerarquiadependencia different columns: 2
+[Info]2022/06/29 10:22:05 ALTER TABLE `exp_pre_Jerarquiadependencia` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:05 ALTER TABLE `exp_pre_Jerarquiadependencia` ADD COLUMN `JerarquiadependenciaID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:22:06 database: siis table: exp_pre_Jerarquiadependenciaautoridad different columns: 1
+[Info]2022/06/29 10:22:06 ALTER TABLE `exp_pre_Jerarquiadependenciaautoridad` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:06 database: siistesting table: exp_pre_Jerarquiadependenciaautoridad different columns: 5
+[Info]2022/06/29 10:22:06 ALTER TABLE `exp_pre_Jerarquiadependenciaautoridad` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:06 ALTER TABLE `exp_pre_Jerarquiadependenciaautoridad` ADD COLUMN `Fechainivig` datetime NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/29 10:22:06 ALTER TABLE `exp_pre_Jerarquiadependenciaautoridad` ADD COLUMN `JerarquiadependenciaautoridadID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/29 10:22:06 ALTER TABLE `exp_pre_Jerarquiadependenciaautoridad` ADD COLUMN `AutoridaddependenciaID` varchar(50) NOT NULL DEFAULT NULL AFTER `JerarquiadependenciaautoridadID`;
+[Info]2022/06/29 10:22:06 ALTER TABLE `exp_pre_Jerarquiadependenciaautoridad` ADD COLUMN `JerarquiadependenciaID` varchar(50) NOT NULL DEFAULT NULL AFTER `AutoridaddependenciaID`;
+[Info]2022/06/29 10:22:07 database: siis table: exp_pre_Jerarquiajuzgado different columns: 1
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiajuzgado` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:07 database: siistesting table: exp_pre_Jerarquiajuzgado different columns: 3
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiajuzgado` ADD COLUMN `Descripcion` text NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiajuzgado` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL AFTER `Descripcion`;
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiajuzgado` ADD COLUMN `JerarquiajuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:22:07 database: siis table: exp_pre_Jerarquiausuario different columns: 1
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiausuario` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:07 database: siistesting table: exp_pre_Jerarquiausuario different columns: 5
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiausuario` ADD COLUMN `Fechafinvig` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiausuario` ADD COLUMN `Fechainivig` datetime NULL DEFAULT NULL AFTER `Fechafinvig`;
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiausuario` ADD COLUMN `JerarquiausuarioID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechainivig`;
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiausuario` ADD COLUMN `JerarquiaID` varchar(50) NOT NULL DEFAULT NULL AFTER `JerarquiausuarioID`;
+[Info]2022/06/29 10:22:07 ALTER TABLE `exp_pre_Jerarquiausuario` ADD COLUMN `UsuarioID` varchar(50) NOT NULL DEFAULT NULL AFTER `JerarquiaID`;
+[Info]2022/06/29 10:22:08 both tables exp_pre_Jurisdiccion have same columns
+[Info]2022/06/29 10:22:09 both tables exp_pre_Juzgado have same columns
+[Info]2022/06/29 10:22:09 database: siis table: exp_pre_Juzgadoestado different columns: 1
+[Info]2022/06/29 10:22:09 ALTER TABLE `exp_pre_Juzgadoestado` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:09 database: siistesting table: exp_pre_Juzgadoestado different columns: 5
+[Info]2022/06/29 10:22:09 ALTER TABLE `exp_pre_Juzgadoestado` ADD COLUMN `Fechafinestado` datetime NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:09 ALTER TABLE `exp_pre_Juzgadoestado` ADD COLUMN `Fechainiestado` datetime NULL DEFAULT NULL AFTER `Fechafinestado`;
+[Info]2022/06/29 10:22:09 ALTER TABLE `exp_pre_Juzgadoestado` ADD COLUMN `JuzgadoestadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `Fechainiestado`;
+[Info]2022/06/29 10:22:09 ALTER TABLE `exp_pre_Juzgadoestado` ADD COLUMN `EstadojuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `JuzgadoestadoID`;
+[Info]2022/06/29 10:22:09 ALTER TABLE `exp_pre_Juzgadoestado` ADD COLUMN `JuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `EstadojuzgadoID`;
+[Info]2022/06/29 10:22:10 database: siis table: exp_pre_Juzgadotipojuzgado different columns: 1
+[Info]2022/06/29 10:22:10 ALTER TABLE `exp_pre_Juzgadotipojuzgado` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:10 database: siistesting table: exp_pre_Juzgadotipojuzgado different columns: 4
+[Info]2022/06/29 10:22:10 ALTER TABLE `exp_pre_Juzgadotipojuzgado` ADD COLUMN `Descripcion` text NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:10 ALTER TABLE `exp_pre_Juzgadotipojuzgado` ADD COLUMN `Nombre` varchar(50) NULL DEFAULT NULL AFTER `Descripcion`;
+[Info]2022/06/29 10:22:10 ALTER TABLE `exp_pre_Juzgadotipojuzgado` ADD COLUMN `JuzgadotipojuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `Nombre`;
+[Info]2022/06/29 10:22:10 ALTER TABLE `exp_pre_Juzgadotipojuzgado` ADD COLUMN `TipojuzgadoID` varchar(50) NOT NULL DEFAULT NULL AFTER `JuzgadotipojuzgadoID`;
+[Info]2022/06/29 10:22:11 both tables exp_pre_Ley have same columns
+[Info]2022/06/29 10:22:12 both tables exp_pre_Localidad have same columns
+[Info]2022/06/29 10:22:12 both tables exp_pre_Moatributomo have same columns
+[Info]2022/06/29 10:22:13 both tables exp_pre_Modusoperandi have same columns
+[Info]2022/06/29 10:22:14 both tables exp_pre_Ocupacion have same columns
+[Info]2022/06/29 10:22:15 both tables exp_pre_Ocupacionpersona have same columns
+[Info]2022/06/29 10:22:15 both tables exp_pre_Pais have same columns
+[Info]2022/06/29 10:22:16 both tables exp_pre_Permisotipousuario have same columns
+[Info]2022/06/29 10:22:17 both tables exp_pre_Permisousuario have same columns
+[Info]2022/06/29 10:22:17 both tables exp_pre_Personadomicilio have same columns
+[Info]2022/06/29 10:22:18 both tables exp_pre_Personafisica have same columns
+[Info]2022/06/29 10:22:19 both tables exp_pre_Personajuridica have same columns
+[Info]2022/06/29 10:22:20 both tables exp_pre_PersonalInterviniente have same columns
+[Info]2022/06/29 10:22:20 both tables exp_pre_Prorrogasumario have same columns
+[Info]2022/06/29 10:22:21 both tables exp_pre_Protagonistas have same columns
+[Info]2022/06/29 10:22:22 both tables exp_pre_Provincia have same columns
+[Info]2022/06/29 10:22:22 both tables exp_pre_Roldependenciasumario have same columns
+[Info]2022/06/29 10:22:23 both tables exp_pre_Rolesdenuncia have same columns
+[Info]2022/06/29 10:22:24 both tables exp_pre_Roljuzgadosumario have same columns
+[Info]2022/06/29 10:22:24 both tables exp_pre_Rolpersonadenuncia have same columns
+[Info]2022/06/29 10:22:25 both tables exp_pre_Roltipodenuncia have same columns
+[Info]2022/06/29 10:22:26 both tables exp_pre_Siniestrovial have same columns
+[Info]2022/06/29 10:22:26 database: siis table: exp_pre_Sumario different columns: 1
+[Info]2022/06/29 10:22:26 ALTER TABLE `exp_pre_Sumario` ADD COLUMN `CreatorID` varchar(50) NULL DEFAULT NULL AFTER `CausaCaratula`;
+[Info]2022/06/29 10:22:26 database: siistesting table: exp_pre_Sumario different columns: 0
+[Info]2022/06/29 10:22:27 both tables exp_pre_SumarioArticulos have same columns
+[Info]2022/06/29 10:22:28 both tables exp_pre_Sumarioarchivo have same columns
+[Info]2022/06/29 10:22:28 both tables exp_pre_Sumarioestado have same columns
+[Info]2022/06/29 10:22:29 both tables exp_pre_Tamañoseccion have same columns
+[Info]2022/06/29 10:22:30 both tables exp_pre_Teate have same columns
+[Info]2022/06/29 10:22:30 both tables exp_pre_Teavalor have same columns
+[Info]2022/06/29 10:22:31 both tables exp_pre_Teavtea have same columns
+[Info]2022/06/29 10:22:32 both tables exp_pre_Tipocausacaratula have same columns
+[Info]2022/06/29 10:22:32 both tables exp_pre_Tipodenuncia have same columns
+[Info]2022/06/29 10:22:33 both tables exp_pre_Tipodiligencia have same columns
+[Info]2022/06/29 10:22:34 both tables exp_pre_Tipodiligenciaatributo have same columns
+[Info]2022/06/29 10:22:34 both tables exp_pre_Tipodiligenciaatributovalor have same columns
+[Info]2022/06/29 10:22:35 both tables exp_pre_Tipodocumento have same columns
+[Info]2022/06/29 10:22:36 both tables exp_pre_Tipoefecto have same columns
+[Info]2022/06/29 10:22:37 both tables exp_pre_Tipoefectoatributo have same columns
+[Info]2022/06/29 10:22:37 both tables exp_pre_Tipojuzgado have same columns
+[Info]2022/06/29 10:22:38 both tables exp_pre_Tipolugar have same columns
+[Info]2022/06/29 10:22:39 both tables exp_pre_Tipomodusoperandi have same columns
+[Info]2022/06/29 10:22:39 both tables exp_pre_Tipomoneda have same columns
+[Info]2022/06/29 10:22:40 both tables exp_pre_Tiposumario have same columns
+[Info]2022/06/29 10:22:41 both tables exp_pre_Tipousuario have same columns
+[Info]2022/06/29 10:22:41 both tables exp_pre_Ubicacion have same columns
+[Info]2022/06/29 10:22:42 both tables exp_pre_Usuario have same columns
+[Info]2022/06/29 10:22:43 both tables exp_pre_Usuarioestado have same columns
+[Info]2022/06/29 10:22:43 database: siis table: exp_pre_Usuariosumario different columns: 1
+[Info]2022/06/29 10:22:43 ALTER TABLE `exp_pre_Usuariosumario` ADD COLUMN `Numeroextracto` varchar(50) NULL DEFAULT NULL AFTER `DependenciaID`;
+[Info]2022/06/29 10:22:43 database: siistesting table: exp_pre_Usuariosumario different columns: 0
+[Info]2022/06/29 10:22:44 both tables exp_pre_Valoratributomo have same columns
+[Info]2022/06/29 10:22:45 both tables exp_pre_Vehiculos have same columns
+[Info]2022/06/29 10:22:45 both tables exp_pre_categoriatipoarchivopdf have same columns
+[Info]2022/06/29 10:22:46 database: siis table: exp_pre_event_log different columns: 1
+[Info]2022/06/29 10:22:46 ALTER TABLE `exp_pre_event_log` ADD COLUMN `id` varchar(50) NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:46 database: siistesting table: exp_pre_event_log different columns: 3
+[Info]2022/06/29 10:22:46 ALTER TABLE `exp_pre_event_log` ADD COLUMN `fecha` date NOT NULL DEFAULT NULL;
+[Info]2022/06/29 10:22:46 ALTER TABLE `exp_pre_event_log` ADD COLUMN `code` varchar(500) NULL DEFAULT NULL AFTER `fecha`;
+[Info]2022/06/29 10:22:46 ALTER TABLE `exp_pre_event_log` ADD COLUMN `message` varchar(500) NULL DEFAULT NULL AFTER `code`;
+[Info]2022/06/29 10:22:47 both tables exp_pre_logsql have same columns
+[Info]2022/06/29 10:24:01 both databases exp_pre_event_log with different indexes with a total of 1 respectively: [PRIMARY]
